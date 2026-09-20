@@ -52,7 +52,7 @@ cd logistics-ai-lab
 .\scripts\serve.ps1
 ```
 
-브라우저에서 **http://127.0.0.1:8768/docs**를 엽니다. `POST /route`, `POST /ask`에서 **Try it out → Execute**를 누르면 됩니다. 처음에는 학습 가중치나 외부 모델 없이 `two_opt`와 `bm25`를 바로 실행할 수 있습니다.
+브라우저에서 [로컬 시연 화면](http://127.0.0.1:8768/docs)을 엽니다. `POST /route`, `POST /ask`에서 **Try it out → Execute**를 누르면 됩니다. 처음에는 학습 가중치나 외부 모델 없이 `two_opt`와 `bm25`를 바로 실행할 수 있습니다.
 
 PowerShell 정책이 스크립트 실행을 막으면 전역 정책을 바꾸지 않고 다음 명령을 각각 실행합니다.
 
