@@ -1,0 +1,108 @@
+{
+  "problem": "synthetic Euclidean CVRP",
+  "distance_unit": "dimensionless coordinate units",
+  "objective": "minimize total distance including depot returns, subject to visit-once and capacity",
+  "data": {
+    "generator": "uniform [0,1]^2 customers; central depot; integer demand 1..9 capped by capacity",
+    "synthetic": true,
+    "n_customers": 15,
+    "capacity": 30,
+    "seed_ranges_inclusive": {
+      "training": [
+        42000000000,
+        42000051199
+      ],
+      "validation": [
+        42100000000,
+        42100000063
+      ],
+      "test": [
+        42200000000,
+        42200000127
+      ]
+    },
+    "training_instances": 51200,
+    "validation_instances": 64,
+    "test_instances": 128,
+    "disjoint_seed_ranges": true
+  },
+  "training": {
+    "steps": 400,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "seconds": 64.30470319998858,
+    "selected_step": 360,
+    "checkpoint_selection": "lowest validation mean distance among evaluated trained checkpoints",
+    "initial_validation_distance": 5.537202835083008,
+    "selected_validation_distance": 4.992972373962402,
+    "parameter_change_l2": 3.3656067527700007,
+    "parameter_count": 63109
+  },
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.5.3",
+    "device": "cuda",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "cpu_threads": 2,
+    "deterministic_algorithms": true
+  },
+  "evaluation": {
+    "seconds": 11.64039000000048,
+    "timing_scope": "warm batch-size-1 solve with feasibility check; excludes checkpoint load; 2-opt includes its parent solve",
+    "methods": {
+      "gnn_reinforce": {
+        "mean_distance": 5.001019081534731,
+        "std_distance": 0.6781792672296089,
+        "valid_fraction": 1.0,
+        "mean_vehicles": 3.640625,
+        "mean_latency_ms": 44.75517265700546,
+        "median_latency_ms": 43.81884999747854
+      },
+      "gnn_reinforce_2opt": {
+        "mean_distance": 4.8670280864376565,
+        "std_distance": 0.6632815174671922,
+        "valid_fraction": 1.0,
+        "mean_vehicles": 3.640625,
+        "mean_latency_ms": 44.96890234440798,
+        "median_latency_ms": 44.01729999517556
+      },
+      "initial_policy": {
+        "mean_distance": 5.453347929015433,
+        "std_distance": 0.7307691687148847,
+        "valid_fraction": 1.0,
+        "mean_vehicles": 3.1953125,
+        "mean_latency_ms": 44.71180390510199,
+        "median_latency_ms": 43.83364999375772
+      },
+      "nearest_neighbor": {
+        "mean_distance": 5.582568498728021,
+        "std_distance": 0.7927290421356379,
+        "valid_fraction": 1.0,
+        "mean_vehicles": 2.9921875,
+        "mean_latency_ms": 0.36919531237344927,
+        "median_latency_ms": 0.3683499962789938
+      },
+      "nearest_neighbor_2opt": {
+        "mean_distance": 5.3409965808161015,
+        "std_distance": 0.7147094848897307,
+        "valid_fraction": 1.0,
+        "mean_vehicles": 2.9921875,
+        "mean_latency_ms": 0.5707585931986614,
+        "median_latency_ms": 0.563499990676064
+      }
+    },
+    "trained_improvement_pct_vs_initial": 8.294516567960247,
+    "trained_improvement_pct_vs_nearest_neighbor": 10.417237465618106,
+    "all_routes_independently_validated": true
+  },
+  "limitations": [
+    "Synthetic instances only; no CJ or customer data.",
+    "No road network, traffic, time windows, fleet limit, or production integration.",
+    "REINFORCE is stochastic and learned routing may underperform classical heuristics.",
+    "No optimal solver/reference; improvements are versus named baselines, never optimality gaps.",
+    "Distance prior contributes heuristic knowledge; initial-policy comparison isolates measured training effect.",
+    "Determinism is scoped to the same hardware/software environment."
+  ]
+}

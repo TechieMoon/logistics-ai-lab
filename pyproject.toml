@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logistics-ai-lab"
+version = "0.1.0"
+description = "Reproducible synthetic logistics experiments: Korean RAG and GNN/RL routing"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+dependencies = [
+  "numpy>=2.0,<3", "torch>=2.8,<2.9", "transformers>=4.57,<5",
+  "safetensors>=0.6", "sentencepiece>=0.2", "fastapi>=0.115,<1",
+  "uvicorn>=0.35,<1", "matplotlib>=3.10,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.12,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"

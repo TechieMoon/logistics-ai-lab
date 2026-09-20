@@ -1,0 +1,337 @@
+{
+  "run_at_utc": "2026-09-20T00:02:07.609560+00:00",
+  "samples": [
+    {
+      "endpoint": "/route",
+      "request": {
+        "seed": 20260920,
+        "algorithm": "learned_two_opt"
+      },
+      "status": 200,
+      "response": {
+        "synthetic_data": true,
+        "distance_unit": "unit-square Euclidean distance, not km",
+        "instance": {
+          "coords": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.4702101361027673,
+              0.3725829338533818
+            ],
+            [
+              0.9189650202663191,
+              0.7812549709086944
+            ],
+            [
+              0.5953443498143272,
+              0.24665061206047734
+            ],
+            [
+              0.8407739366882823,
+              0.4877060388046829
+            ],
+            [
+              0.2566667184614847,
+              0.24270123020598866
+            ],
+            [
+              0.355870309262328,
+              0.41762762240375917
+            ],
+            [
+              0.5153756504395157,
+              0.9217334746651791
+            ],
+            [
+              0.10668056086040267,
+              0.9145050712343914
+            ],
+            [
+              0.7139508863187007,
+              0.8715982488932978
+            ],
+            [
+              0.09514534745553471,
+              0.9473254811096754
+            ],
+            [
+              0.01793458658755165,
+              0.461977415119463
+            ],
+            [
+              0.03272782993305001,
+              0.9962412412219586
+            ],
+            [
+              0.20889873687672111,
+              0.09667166251058534
+            ],
+            [
+              0.3245645690294069,
+              0.23005688892117937
+            ],
+            [
+              0.08190025232866605,
+              0.047958827675697036
+            ]
+          ],
+          "demands": [
+            0.0,
+            1.0,
+            8.0,
+            5.0,
+            4.0,
+            2.0,
+            6.0,
+            9.0,
+            9.0,
+            4.0,
+            6.0,
+            8.0,
+            4.0,
+            5.0,
+            9.0,
+            4.0
+          ],
+          "capacity": 30.0
+        },
+        "solution": {
+          "routes": [
+            [
+              0,
+              9,
+              2,
+              4,
+              3,
+              13,
+              5,
+              1,
+              0
+            ],
+            [
+              0,
+              7,
+              12,
+              10,
+              8,
+              0
+            ],
+            [
+              0,
+              6,
+              11,
+              15,
+              14,
+              0
+            ]
+          ],
+          "distance": 5.396574714173891,
+          "valid": true,
+          "diagnostics": {
+            "method": "gnn_reinforce_greedy+2opt",
+            "valid": true,
+            "errors": [],
+            "distance": 5.396574714173891,
+            "route_loads": [
+              29.0,
+              28.0,
+              27.0
+            ],
+            "vehicles_used": 3,
+            "customers_served": 15
+          }
+        },
+        "nearest_neighbor_distance": 4.928154261354305,
+        "improvement_vs_nearest_percent": -9.504987627778922
+      }
+    },
+    {
+      "endpoint": "/ask",
+      "request": {
+        "question": "냉장 상품은 몇 도로 보관하나요?",
+        "mode": "hybrid",
+        "device": "cuda",
+        "generate": true
+      },
+      "status": 200,
+      "response": {
+        "question": "냉장 상품은 몇 도로 보관하나요?",
+        "notice": "교육용 가상 정책입니다. 실제 CJ 계열사 정책이나 내부 데이터가 아닙니다.",
+        "abstained": true,
+        "reason": "insufficient_lexical_support",
+        "support_score": 0.13562228020032313,
+        "threshold": 0.14116655162035183,
+        "answer": "제공된 합성 정책에서 답변 근거를 충분히 확인할 수 없습니다. 담당자 또는 적절한 문서를 확인해 주세요.",
+        "evidence": [],
+        "retrieval_candidates": [
+          {
+            "doc_id": "SYN-OPS-001",
+            "version": "1.0",
+            "title": "냉장 화물 온도 이탈 대응",
+            "text": "합성 물류센터의 냉장 화물 허용 온도는 섭씨 2도 이상 8도 이하이다. 센서 온도가 허용 범위를 벗어난 상태가 10분 연속 유지되면 관제 담당자는 온도 이탈 경보를 등록한다. 해당 화물을 격리하고 품질 담당자에게 검토를 요청한다. 품질 담당자의 승인 전에는 출고하지 않는다.",
+            "synthetic": true,
+            "score": 0.03252247488101534,
+            "rank": 1,
+            "lexical_coverage": 0.13562228020032313,
+            "citation": "[SYN-OPS-001@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-002",
+            "version": "1.0",
+            "title": "냉동 화물 온도 관리",
+            "text": "합성 물류센터의 냉동 화물은 섭씨 영하 18도 이하로 보관한다. 냉동 센서가 영하 15도보다 높은 온도를 5분 연속 기록하면 냉동 이탈 사건으로 등록한다. 해당 구역 화물의 출고를 보류하고 냉동 설비를 점검한다.",
+            "synthetic": true,
+            "score": 0.03177805800756621,
+            "rank": 2,
+            "lexical_coverage": 0.053542911036277195,
+            "citation": "[SYN-OPS-002@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-010",
+            "version": "1.0",
+            "title": "물류 운영 기록 보관과 개인정보",
+            "text": "합성 시스템의 운영 사건 로그는 30일간 보관한 후 삭제한다. 분석 데이터에는 고객 이름, 전화번호, 상세 주소를 포함하지 않는다. 주문 식별자는 무작위 실험 식별자로 대체한다. 원본 개인정보를 외부 생성형 모델에 입력하지 않는다.",
+            "synthetic": true,
+            "score": 0.031746031746031744,
+            "rank": 3,
+            "lexical_coverage": 0.053542911036277195,
+            "citation": "[SYN-OPS-010@1.0]"
+          }
+        ],
+        "model_draft": null,
+        "retrieval_latency_ms": 8.205599995562807,
+        "retriever": "hybrid",
+        "generation_requested": true
+      }
+    },
+    {
+      "endpoint": "/ask",
+      "request": {
+        "question": "CJ대한통운의 실제 배송 지연 보상 금액은 얼마인가요?"
+      },
+      "status": 200,
+      "response": {
+        "question": "CJ대한통운의 실제 배송 지연 보상 금액은 얼마인가요?",
+        "notice": "교육용 가상 정책입니다. 실제 CJ 계열사 정책이나 내부 데이터가 아닙니다.",
+        "abstained": true,
+        "reason": "actual_company_policy_not_available",
+        "support_score": 0.0,
+        "threshold": 1.0,
+        "answer": "제공된 합성 정책에서 답변 근거를 충분히 확인할 수 없습니다. 담당자 또는 적절한 문서를 확인해 주세요.",
+        "evidence": [],
+        "retrieval_candidates": [],
+        "model_draft": null,
+        "retriever": "bm25"
+      }
+    },
+    {
+      "endpoint": "/ask",
+      "request": {
+        "question": "파손 화물을 접수할 때 사진을 몇 장 남기나요?",
+        "mode": "hybrid",
+        "device": "cuda",
+        "generate": true
+      },
+      "status": 200,
+      "response": {
+        "question": "파손 화물을 접수할 때 사진을 몇 장 남기나요?",
+        "notice": "교육용 가상 정책입니다. 실제 CJ 계열사 정책이나 내부 데이터가 아닙니다.",
+        "abstained": false,
+        "reason": null,
+        "support_score": 0.21493704506159414,
+        "threshold": 0.14116655162035183,
+        "answer": "관련 합성 정책의 원문 근거입니다. 요청한 모든 사실을 포함하는지는 직접 확인해야 합니다.",
+        "evidence": [
+          {
+            "doc_id": "SYN-OPS-007",
+            "version": "1.0",
+            "title": "파손 화물 접수와 격리",
+            "text": "합성 화물의 포장 파손이 발견되면 담당자는 파손 부위 사진 2장과 발견 시각을 접수 기록에 첨부한다. 내용물 손상이 의심되는 화물은 격리 구역으로 옮긴다. 보상 금액은 이 문서에서 정하지 않으며 별도 계약 확인이 필요하다.",
+            "synthetic": true,
+            "score": 0.03278688524590164,
+            "rank": 1,
+            "lexical_coverage": 0.21493704506159414,
+            "citation": "[SYN-OPS-007@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-002",
+            "version": "1.0",
+            "title": "냉동 화물 온도 관리",
+            "text": "합성 물류센터의 냉동 화물은 섭씨 영하 18도 이하로 보관한다. 냉동 센서가 영하 15도보다 높은 온도를 5분 연속 기록하면 냉동 이탈 사건으로 등록한다. 해당 구역 화물의 출고를 보류하고 냉동 설비를 점검한다.",
+            "synthetic": true,
+            "score": 0.03125,
+            "rank": 2,
+            "lexical_coverage": 0.017556080787672883,
+            "citation": "[SYN-OPS-002@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-014",
+            "version": "1.0",
+            "title": "화물 분실 의심 신고",
+            "text": "합성 화물이 마지막 허브 스캔 이후 24시간 동안 후속 스캔 없이 도착 예정 시각을 지나면 분실 의심 검토 대상이다. 관제 담당자는 마지막 스캔 위치와 차량 인계 기록을 확인한다. 분실 확정과 고객 보상은 담당자 승인 없이는 처리하지 않는다.",
+            "synthetic": true,
+            "score": 0.031054405392392875,
+            "rank": 3,
+            "lexical_coverage": 0.017556080787672883,
+            "citation": "[SYN-OPS-014@1.0]"
+          }
+        ],
+        "retrieval_candidates": [
+          {
+            "doc_id": "SYN-OPS-007",
+            "version": "1.0",
+            "title": "파손 화물 접수와 격리",
+            "text": "합성 화물의 포장 파손이 발견되면 담당자는 파손 부위 사진 2장과 발견 시각을 접수 기록에 첨부한다. 내용물 손상이 의심되는 화물은 격리 구역으로 옮긴다. 보상 금액은 이 문서에서 정하지 않으며 별도 계약 확인이 필요하다.",
+            "synthetic": true,
+            "score": 0.03278688524590164,
+            "rank": 1,
+            "lexical_coverage": 0.21493704506159414,
+            "citation": "[SYN-OPS-007@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-002",
+            "version": "1.0",
+            "title": "냉동 화물 온도 관리",
+            "text": "합성 물류센터의 냉동 화물은 섭씨 영하 18도 이하로 보관한다. 냉동 센서가 영하 15도보다 높은 온도를 5분 연속 기록하면 냉동 이탈 사건으로 등록한다. 해당 구역 화물의 출고를 보류하고 냉동 설비를 점검한다.",
+            "synthetic": true,
+            "score": 0.03125,
+            "rank": 2,
+            "lexical_coverage": 0.017556080787672883,
+            "citation": "[SYN-OPS-002@1.0]"
+          },
+          {
+            "doc_id": "SYN-OPS-014",
+            "version": "1.0",
+            "title": "화물 분실 의심 신고",
+            "text": "합성 화물이 마지막 허브 스캔 이후 24시간 동안 후속 스캔 없이 도착 예정 시각을 지나면 분실 의심 검토 대상이다. 관제 담당자는 마지막 스캔 위치와 차량 인계 기록을 확인한다. 분실 확정과 고객 보상은 담당자 승인 없이는 처리하지 않는다.",
+            "synthetic": true,
+            "score": 0.031054405392392875,
+            "rank": 3,
+            "lexical_coverage": 0.017556080787672883,
+            "citation": "[SYN-OPS-014@1.0]"
+          }
+        ],
+        "model_draft": {
+          "text": "합성 화물의 파손이 발견될 경우, 담당자는 파손 부위 사진 2장을 접수 기록에 첨부해야 합니다. 이러한 사진들은 파손 사항을 명확히 나타내며, 이를 통해 파손 원인을 진단하는데 유용합니다. 또한, 파손이 발견된 화물은 격리 구역으로 이동되어 보상금 및 관련 조치를 결정하기 위한 추가적인 정보를 제공합니다.",
+          "model": "Qwen/Qwen2.5-1.5B-Instruct",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+          "generated_tokens": 104,
+          "latency_ms": 4504.397000011522,
+          "citation_check": {
+            "present": false,
+            "unknown_citations": [],
+            "valid_syntax_only": false
+          },
+          "verified": false,
+          "warning": "검증되지 않은 모델 초안입니다. 인용 형식 점검은 근거 일치나 사실성 검증이 아닙니다."
+        },
+        "retrieval_latency_ms": 22.31200000096578,
+        "retriever": "hybrid",
+        "generation_requested": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "run_at_utc": "2026-09-19T23:55:50.967837+00:00",
+  "status": "completed",
+  "dataset": "hand-authored synthetic logistics QA v1.0",
+  "synthetic_only": true,
+  "retriever": "dense",
+  "device_requested": "cuda",
+  "device_used": "cuda",
+  "embedding": {
+    "model": "intfloat/multilingual-e5-small",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+  },
+  "generation": {
+    "requested": false,
+    "model": null,
+    "revision": null,
+    "completed_queries": 0,
+    "limit": 0,
+    "human_factuality_review": "not_performed"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "cuda_runtime": "12.8"
+  },
+  "document_count": 16,
+  "evaluation_questions": 16,
+  "answerable_questions": 10,
+  "unanswerable_questions": 6,
+  "evidence_k": 3,
+  "input_sha256": {
+    "corpus": "f49dad0af3ed28eb8f71856bb278fc04e25d37b581a306f05a72b813a4b41138",
+    "dev": "bee88acaedee823deb6f8d3d444a4071d92ed5f63f4f2fc4d9cb344264e0fbf0",
+    "eval": "87a2fa691daaac62c491d2ff350d44e0c0a4d39f5e86abe71c6f8ffc1323abc9"
+  },
+  "calibration_threshold": 0.14116655162035183,
+  "retrieval": {
+    "recall@1": 0.9,
+    "recall@3": 0.95,
+    "recall@5": 1.0,
+    "mrr@1": 1.0,
+    "mrr@3": 1.0,
+    "mrr@5": 1.0
+  },
+  "abstention": {
+    "known_query_acceptance_rate": 1,
+    "unknown_query_refusal_rate": 0.6666666666666666,
+    "unknown_false_accept_count": 2,
+    "known_false_refusal_count": 0,
+    "overall_answer_coverage": 0.75,
+    "accepted_query_relevant_chunk_present_rate": 0.8333333333333334
+  },
+  "latency_ms": {
+    "index_build": 3329.7834000113653,
+    "retrieval_p50": 7.921100012026727,
+    "retrieval_p95": 8.721524991415208,
+    "generation_p50": null
+  },
+  "generation_citation_syntax_pass_rate": null,
+  "limitations": [
+    "Tiny hand-authored synthetic corpus and QA by the same author; not production or independent validation.",
+    "Development-only threshold is a lexical heuristic; unsupported in-domain questions can still pass.",
+    "Retrieval recall, presence of evidence and citation syntax do not establish answer factuality.",
+    "No LLM-as-judge or human factuality score is claimed. Inspect per_query.json model drafts manually.",
+    "Input hashes identify the exact frozen data used; changing data invalidates direct metric comparisons."
+  ],
+  "cuda_peak_allocated_mb": 472.65673828125
+}

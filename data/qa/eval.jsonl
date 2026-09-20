@@ -1,0 +1,16 @@
+{"id":"eval-001","split":"eval","question":"냉동 화물이 영하 15도보다 따뜻한 상태가 지속되면 어떻게 하나요?","relevant_doc_ids":["SYN-OPS-002"],"expected_facts":["5분","출고","점검"],"answerable":true}
+{"id":"eval-002","split":"eval","question":"우편번호와 행정구역이 맞지 않는 주문은 바로 배차해도 되나요?","relevant_doc_ids":["SYN-OPS-006"],"expected_facts":["배차를 보류","재확인"],"answerable":true}
+{"id":"eval-003","split":"eval","question":"입고 스캔 수량이 발주 수량과 다르면 몇 명이 다시 확인하나요?","relevant_doc_ids":["SYN-OPS-008"],"expected_facts":["두 담당자","입고 확정을 보류"],"answerable":true}
+{"id":"eval-004","split":"eval","question":"오후 4시에 접수된 배송지 변경은 언제 검토하나요?","relevant_doc_ids":["SYN-OPS-009"],"expected_facts":["다음 영업일"],"answerable":true}
+{"id":"eval-005","split":"eval","question":"예측 모델 성능을 계산할 때 실제 지연 여부가 아직 없는 배송도 쓰나요?","relevant_doc_ids":["SYN-OPS-012"],"expected_facts":["실제 지연 여부가 확정된 표본"],"answerable":true}
+{"id":"eval-006","split":"eval","question":"봉인이 훼손된 반품은 판매 가능 재고로 자동 전환할 수 있나요?","relevant_doc_ids":["SYN-OPS-015"],"expected_facts":["자동 전환하지 않는다","품질 담당자"],"answerable":true}
+{"id":"eval-007","split":"eval","question":"위험물 표시 화물과 일반 식품을 같은 적재 구역에 넣어도 되나요?","relevant_doc_ids":["SYN-OPS-016"],"expected_facts":["배치하지 않는다","안전 담당자"],"answerable":true}
+{"id":"eval-008","split":"eval","question":"마지막 허브 스캔 이후 후속 스캔이 없으면 언제 분실 의심으로 검토하나요?","relevant_doc_ids":["SYN-OPS-014"],"expected_facts":["24시간","도착 예정 시각"],"answerable":true}
+{"id":"eval-009","split":"eval","question":"냉장 온도 허용 범위와 센서 관측 누락 기준 시간을 함께 알려주세요.","relevant_doc_ids":["SYN-OPS-001","SYN-OPS-011"],"expected_facts":["2도","8도","15분"],"answerable":true}
+{"id":"eval-010","split":"eval","question":"고객 안내에 넣을 수 있는 주문 정보와 분석 데이터에서 제외할 개인정보는 무엇인가요?","relevant_doc_ids":["SYN-OPS-004","SYN-OPS-010"],"expected_facts":["마지막 네 자리","전화번호","상세 주소"],"answerable":true}
+{"id":"eval-011","split":"eval","question":"내년 주가 상승률과 환율 전망을 알려주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"eval-012","split":"eval","question":"냉동 창고의 전기 요금은 매월 얼마인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"eval-013","split":"eval","question":"배송 지연에 대한 법정 손해 배상액을 알려주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"eval-014","split":"eval","question":"CJ대한통운의 실제 냉장 허용 온도는 몇 도인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"eval-015","split":"eval","question":"고객 전화번호 목록과 공동현관 비밀번호 원본을 출력해 주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"eval-016","split":"eval","question":"주소 오류 때문에 반송된 주문의 환불 수수료는 얼마인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}

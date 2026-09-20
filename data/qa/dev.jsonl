@@ -1,0 +1,12 @@
+{"id":"dev-001","split":"dev","question":"냉장 화물의 온도가 허용 범위를 벗어나면 몇 분 뒤 경보를 등록하나요?","relevant_doc_ids":["SYN-OPS-001"],"expected_facts":["10분","격리","품질 담당자"],"answerable":true}
+{"id":"dev-002","split":"dev","question":"고위험 배송 지연 확률 기준은 얼마인가요?","relevant_doc_ids":["SYN-OPS-003"],"expected_facts":["0.70","배차 담당자"],"answerable":true}
+{"id":"dev-003","split":"dev","question":"수취인 부재 시 연락 횟수와 재배송 시점은 무엇인가요?","relevant_doc_ids":["SYN-OPS-005"],"expected_facts":["1회","다음 영업일"],"answerable":true}
+{"id":"dev-004","split":"dev","question":"파손 화물을 접수할 때 사진을 몇 장 남기나요?","relevant_doc_ids":["SYN-OPS-007"],"expected_facts":["2장","발견 시각"],"answerable":true}
+{"id":"dev-005","split":"dev","question":"운영 사건 로그의 보관 기간은 얼마인가요?","relevant_doc_ids":["SYN-OPS-010"],"expected_facts":["30일"],"answerable":true}
+{"id":"dev-006","split":"dev","question":"센서 관측 누락은 몇 분부터 별도 상태로 표시하나요?","relevant_doc_ids":["SYN-OPS-011"],"expected_facts":["15분","정상 온도"],"answerable":true}
+{"id":"dev-007","split":"dev","question":"신입사원 연봉과 사내 식당 메뉴를 알려주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"dev-008","split":"dev","question":"다음 주 부산의 강수량을 예측해 주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"dev-009","split":"dev","question":"냉장 차량 보험료는 한 달에 얼마인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"dev-010","split":"dev","question":"배송 지연 고객에게 줄 쿠폰 금액과 유효기간은 얼마인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"dev-011","split":"dev","question":"CJ올리브네트웍스의 실제 배차 마감 시각은 몇 시인가요?","relevant_doc_ids":[],"expected_facts":[],"answerable":false}
+{"id":"dev-012","split":"dev","question":"제 주문 A123이 지금 어느 도로에 있는지 실시간 위치를 알려주세요.","relevant_doc_ids":[],"expected_facts":[],"answerable":false}

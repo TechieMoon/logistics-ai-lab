@@ -1,0 +1,87 @@
+{
+  "threshold": 0.14116655162035183,
+  "feature": "maximum IDF-weighted query token coverage in retrieved top-k",
+  "accept_condition": "support_score > threshold and no scope refusal",
+  "objective": "known_acceptance_rate - 2 * unknown_acceptance_rate; higher threshold breaks ties",
+  "objective_value": 1.0,
+  "split": "dev",
+  "k": 3,
+  "question_count": 12,
+  "known_acceptance_rate": 1.0,
+  "unknown_acceptance_rate": 0.0,
+  "warning": "Heuristic development-set tuning; not calibrated probability or factuality assurance.",
+  "per_query": [
+    {
+      "id": "dev-001",
+      "answerable": true,
+      "support_score": 0.5623211812028571,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-002",
+      "answerable": true,
+      "support_score": 0.6028395281356429,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-003",
+      "answerable": true,
+      "support_score": 0.49791259913761166,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-004",
+      "answerable": true,
+      "support_score": 0.21493704506159414,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-005",
+      "answerable": true,
+      "support_score": 0.33167467618561647,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-006",
+      "answerable": true,
+      "support_score": 0.29564506473281105,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-007",
+      "answerable": false,
+      "support_score": 0.0,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-008",
+      "answerable": false,
+      "support_score": 0.1000838748269703,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-009",
+      "answerable": false,
+      "support_score": 0.14116655162035183,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-010",
+      "answerable": false,
+      "support_score": 0.12358753982849464,
+      "scope_reason": null
+    },
+    {
+      "id": "dev-011",
+      "answerable": false,
+      "support_score": 0.35636263048171934,
+      "scope_reason": "actual_company_policy_not_available"
+    },
+    {
+      "id": "dev-012",
+      "answerable": false,
+      "support_score": 0.06834782787790297,
+      "scope_reason": null
+    }
+  ]
+}

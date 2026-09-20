@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Preserve exact recorded dataset bytes and experiment input hashes across OSes.
+*.jsonl -text
+*.json -text
+*.csv -text
